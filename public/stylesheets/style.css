@@ -1,8 +1,88 @@
 body {
+  background-color: rgb(34, 34, 34);
+  color: white;
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+.message-board {
+  background-color: rgba(0, 0, 0, 0.476);
+  padding: 30px;
+  width: 50vw;
+  border-radius: 25px;
+}
+
+.full-message {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0px;
+}
+
+.user, .date {
+  color: grey;
+}
+
+.date {
+  font-size: 0.5rem;
+}
+
+.bubble {
+  margin-top: 5px;
+  background-color: rgb(95, 0, 95);
+  width: fit-content;
+  border-radius: 15px;
+  padding: 7px 14px;
+  position: relative;
+  max-width: 200px;
+}
+
+/* form page */
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+#user-name {
+  width: 120px;
+  height: 25px;
+}
+
+#user-message {
+  width: 240px;
+  height: 25px;
+}
+
+#user-name, 
+#user-message {
+  background-color: transparent;
+  border: 2px solid rgb(95, 0, 95);
+  border-radius: 15px;
+  color: white;
+  padding: 0px 2px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+
+#user-name:focus, 
+#user-message:focus {
+  outline: none;
+}
+
+form > button[type="submit"] {
+ border-radius: 10px;
+ height: 25px;
+ width: 80px;
+ background-color: transparent;
+ border: 2px solid rgba(95, 0, 95);
+ color: white;
+ margin-top: 30px;
+}
+
+form > button[type="submit"]:hover {
+  cursor: pointer;
 }
