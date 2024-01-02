@@ -2,10 +2,20 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="stylesheets/style.css" />
   </head>
   <body>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <div class="message-board">
+      <% messages.forEach(msg => { %>
+      <div class="full-message">
+        <span class="user"><%= msg.user %></span>
+        <div class="bubble">
+          <span class="message"><%= msg.text %></span>
+        <span class="date"><%= msg.added.toString().substring(16, 21) %></span>
+        </div>
+      </div>
+      <% }) %>
+    </div>
   </body>
 </html>
