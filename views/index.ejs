@@ -5,17 +5,22 @@
     <link rel="stylesheet" href="stylesheets/style.css" />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <div class="message-board">
-      <% messages.forEach(msg => { %>
-      <div class="full-message">
-        <span class="user"><%= msg.user %></span>
-        <div class="bubble">
-          <span class="message"><%= msg.text %></span>
-        <span class="date"><%= msg.added.toString().substring(16, 21) %></span>
+    <div class="main-div">
+      <h1><%= title %></h1>
+      <div class="content-div">
+        <div class="message-board">
+          <% messages.forEach(msg => { %>
+          <div class="full-message">
+            <span class="user"><%= msg.user %></span>
+            <div class="bubble">
+              <span class="message"><%= msg.text %></span>
+            <span class="date"><%= msg.added.toString().substring(16, 21) %></span>
+            </div>
+          </div>
+          <% }) %>
         </div>
+        <button onclick="window.location.href = '/new'" type="button" class="new-message">Add message</button>
       </div>
-      <% }) %>
     </div>
   </body>
 </html>
